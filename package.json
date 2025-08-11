@@ -1,0 +1,26 @@
+{
+  "name": "nevio-api-tests",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:smoke": "jest \"tests/smoke/**/*.spec.js\"",
+    "test:regression": "jest \"tests/regression/**/*.spec.js\"",
+    "gen:tests": "node tools/ai/generate-tests.mjs"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.7",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "playwright": "^1.45.0",
+    "zod": "^3.23.8",
+    "openai": "^4.60.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

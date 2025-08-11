@@ -1,0 +1,13 @@
+{
+  "tripType": "OW",
+  "trips": {
+    "origin": "MAA",
+    "destination": "LHR",
+    "departureDateTime": "2025-10-24",
+    "isRequestedBound": true
+  },
+  "passengers": {
+    "passengerTypeCode": "ADT"
+  },
+  "fareTypes": "ECO"
+}

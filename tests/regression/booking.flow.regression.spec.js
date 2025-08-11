@@ -3,7 +3,7 @@ import { getAccessToken } from '../../src/services/token.service.mjs';
 import { getOffers } from '../../src/services/shop.service.mjs';
 import { OffersResponseSchema } from '../../src/schemas/offer.schema.mjs';
 import offers from '../../src/data/offers.json' assert { type: 'json' };
-
+.
 describe('Booking flow (regression)', () => {
   let token;
   beforeAll(async () => { token = await getAccessToken(); });

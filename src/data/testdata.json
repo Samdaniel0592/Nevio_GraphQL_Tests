@@ -1,0 +1,72 @@
+[
+  {
+    "name": "MAA to LHR Economy",
+    "tripType": "OW",
+    "trips": {
+      "origin": "MAA",
+      "destination": "LHR",
+      "departureDateTime": "2025-10-24",
+      "isRequestedBound": true
+    },
+    "passengers": {
+      "passengerTypeCode": "ADT"
+    },
+    "fareTypes": "ECO"
+  },
+  {
+    "name": "DEL to NYC Business",
+    "tripType": "RT",
+    "trips": {
+      "origin": "DEL",
+      "destination": "NYC",
+      "departureDateTime": "2025-11-15",
+      "isRequestedBound": true
+    },
+    "passengers": {
+      "passengerTypeCode": "ADT"
+    },
+    "fareTypes": "BUS"
+  },
+  {
+    "name": "BOM to DXB Economy",
+    "tripType": "OW",
+    "trips": {
+      "origin": "BOM",
+      "destination": "DXB",
+      "departureDateTime": "2025-12-01",
+      "isRequestedBound": true
+    },
+    "passengers": {
+      "passengerTypeCode": "ADT"
+    },
+    "fareTypes": "ECO"
+  },
+  {
+    "name": "SIN to SYD Premium",
+    "tripType": "RT",
+    "trips": {
+      "origin": "SIN",
+      "destination": "SYD",
+      "departureDateTime": "2025-09-20",
+      "isRequestedBound": true
+    },
+    "passengers": {
+      "passengerTypeCode": "ADT"
+    },
+    "fareTypes": "PRM"
+  },
+  {
+    "name": "LAX to NRT First",
+    "tripType": "OW",
+    "trips": {
+      "origin": "LAX",
+      "destination": "NRT",
+      "departureDateTime": "2025-08-30",
+      "isRequestedBound": true
+    },
+    "passengers": {
+      "passengerTypeCode": "ADT"
+    },
+    "fareTypes": "FST"
+  }
+]

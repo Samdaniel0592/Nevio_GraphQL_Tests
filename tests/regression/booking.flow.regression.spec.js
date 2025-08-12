@@ -2,14 +2,14 @@ import { cfg } from '../../src/config/env.mjs';
 import { getAccessToken } from '../../src/services/token.service.mjs';
 import { getOffers } from '../../src/services/shop.service.mjs';
 import { OffersResponseSchema } from '../../src/schemas/offer.schema.mjs';
-import offers from '../../src/data/offers.json' assert { type: 'json' };
-.
+import testData from '../../src/data/testdata.json' with { type: 'json' };
+
 describe('Booking flow (regression)', () => {
   let token;
   beforeAll(async () => { token = await getAccessToken(); });
 
-  test('can retrieve offers and validate SKU structure', async () => {
-    const resp = await getOffers({ baseURL: cfg.shopUrl, token, offerRequest: offers });
+  test.each(testData)('can retrieve offers for $name', async ({ name, ...offerRequest }) => {
+    const resp = await getOffers({ baseURL: cfg.shopUrl, token, offerRequest });
 
     // Optional Zod validation to catch regressions early
     const parsed = OffersResponseSchema.safeParse(resp);

@@ -3,7 +3,9 @@ export default {
   testTimeout: 90000,
   reporters: [
     'default',
-    ['jest-html-reporters', { publicPath: './reports', filename: 'report.html', expand: true }]
+    ['jest-allure2-reporter', { resultsDir: './allure-results' }]
   ],
-  setupFiles: ['dotenv/config']
+  setupFiles: ['dotenv/config'],
+  transform: {},
+  testMatch: ['**/*.spec.js']
 };

@@ -6,11 +6,11 @@ import { GqlClient } from '../utils/gqlClient.mjs';
 export async function getOffers({ baseURL, token, offerRequest }) {
   const client = new GqlClient({
     baseURL,
-    headers: { Authorization: `Bearer ${token}` }
+    headers: { Authorization: token }
   });
   await client.init();
   const query = `
-    query GetOffers($req: OfferInput!) {
+    query GetOffers($req: OfferRequest!) {
       getOffers(OfferRequest: $req) {
         response {
           connections {

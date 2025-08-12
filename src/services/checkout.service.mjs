@@ -1,7 +1,7 @@
 import { GqlClient } from '../utils/gqlClient.mjs';
 
 export async function checkoutInitiate({ baseURL, token, input }) {
-  const client = new GqlClient({ baseURL, headers: { Authorization: `Bearer ${token}` } });
+  const client = new GqlClient({ baseURL, headers: { Authorization: token } });
   await client.init();
   const query = `
     mutation CheckoutInitiate($input: CheckoutInitiateInput!) {
@@ -16,7 +16,7 @@ export async function checkoutInitiate({ baseURL, token, input }) {
 }
 
 export async function checkoutPassengers({ baseURL, token, input }) {
-  const client = new GqlClient({ baseURL, headers: { Authorization: `Bearer ${token}` } });
+  const client = new GqlClient({ baseURL, headers: { Authorization: token } });
   await client.init();
   const query = `
     mutation CheckoutPassengers($input: CheckoutPassengersInput!) {
@@ -31,7 +31,7 @@ export async function checkoutPassengers({ baseURL, token, input }) {
 }
 
 export async function checkoutUpdate({ baseURL, token, input }) {
-  const client = new GqlClient({ baseURL, headers: { Authorization: `Bearer ${token}` } });
+  const client = new GqlClient({ baseURL, headers: { Authorization: token } });
   await client.init();
   const query = `
     mutation CheckoutUpdate($input: CheckoutUpdateInput!) {
@@ -46,7 +46,7 @@ export async function checkoutUpdate({ baseURL, token, input }) {
 }
 
 export async function checkoutConfirm({ baseURL, token, input }) {
-  const client = new GqlClient({ baseURL, headers: { Authorization: `Bearer ${token}` } });
+  const client = new GqlClient({ baseURL, headers: { Authorization: token } });
   await client.init();
   const query = `
     mutation CheckoutConfirm($input: CheckoutConfirmInput!) {
@@ -62,7 +62,7 @@ export async function checkoutConfirm({ baseURL, token, input }) {
 }
 
 export async function retrieveOrder({ baseURL, token, input }) {
-  const client = new GqlClient({ baseURL, headers: { Authorization: `Bearer ${token}` } });
+  const client = new GqlClient({ baseURL, headers: { Authorization: token } });
   await client.init();
   const query = `
     query RetrieveOrder($input: RetrieveOrderInput!) {

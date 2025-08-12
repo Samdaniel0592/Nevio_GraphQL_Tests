@@ -8,7 +8,7 @@ Minimal, popular, and scalable GraphQL API test framework for the **Nevio** proj
 - **Zod** — optional schema validation for responses
 - **jest-html-reporters** — simple HTML reports
 - **Optional**: Excel (`xlsx`) loader if business wants .xlsx
-- **Optional**: OpenAI generator for test cases (offline; not part of CI)
+- **Optional**: OpenAI generator for test cases (offline; not part of CI).
 
 ## Requirements
 - Node **18+**
